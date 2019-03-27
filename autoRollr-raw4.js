@@ -47,7 +47,7 @@ loadRoll();
 //-----------------------------------------------------------------------
 
 function autoroll(){
-    var check = localStorage.getItem('roll_option');
+    var check = JSON.parse(localStorage.getItem('roll_option'));
     var enabled = localStorage.getItem('captcha_enabled');
 
     var rollBtn = document.getElementById('free_play_form_button');
@@ -64,7 +64,7 @@ function autoroll(){
                   nocap.click();
                   rollBtn.click();
                 }
-            }else {
+            }else if(enabled === 'no'){
               rollBtn.click();
             }
         }
