@@ -62,9 +62,11 @@ function autoroll(){
                 if(nocapDisplay === 'none'){
                 }else{
                   nocap.click();
+                  rollBtn.click();
                 }
+            }else {
+              rollBtn.click();
             }
-            rollBtn.click();
         }
     }
 
