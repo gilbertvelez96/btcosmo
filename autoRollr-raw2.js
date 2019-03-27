@@ -53,13 +53,12 @@ function autoroll(){
     var rollBtn = document.getElementById('free_play_form_button');
     var display = window.getComputedStyle(rollBtn).getPropertyValue('display');
 
-    var nocap = document.getElementById('play_without_captchas_button');
-    var nocapDisplay = window.getComputedStyle(nocap).getPropertyValue('display');
-
     if(display === 'none'){
     }else{
         if(check === true){
             if(enabled === 'yes'){
+                var nocap = document.getElementById('play_without_captchas_button');
+                var nocapDisplay = window.getComputedStyle(nocap).getPropertyValue('display');
                 if(nocapDisplay === 'none'){
                 }else{
                   nocap.click();
